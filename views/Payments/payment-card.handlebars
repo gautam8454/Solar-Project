@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="/static/css/payments/payment-card.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Payment page</title>
+</head>
+
+<body>
+    <div class="min-h-screen flex justify-center items-center bg-blue-500">
+        <div class=" card rounded-lg h-auto w-3/4 bg-white">
+            <div class="flex h-full w-full ">
+                <div class="left_side truncate relative rounded-l-lg h-auto w-full truncate"> <img class="h-full w-full"
+                        src="https://imgur.com/cOwXXFq.jpg">
+                    <div class="h-48 w-72 opacity-70 rounded-lg bg-blue-300 absolute top-28 left-8 ">
+                        <div class="p-2 mt-3 text-black font-semibold">
+                            <p>Card Number</p>
+                            <p class="border-b-2 text-white shown_number">0000 0000 0000 0000</p>
+                        </div>
+                        <div class="flex gap-3 mt-3">
+                            <div class="p-2 mt-2 text-black font-semibold">
+                                <p>Expiry Date</p>
+                                <p class="border-b-2 text-white shown_expiry">mm/yyyy</p>
+                            </div>
+                            <div class="p-2 mt-2 text-black font-semibold">
+                                <p>CVV</p>
+                                <p class="border-b-2 text-white shown_cvv">000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3 right_side truncate h-auto w-full bg-gray-300 rounded-r-lg">
+                    <p class="mt-3 text-xl font-semibold">Payment Details</p>
+                    <div class="mt-5 relative"> <input
+                            class="input_number h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900"
+                            type="text" placeholder="0000 0000 0000 0000" data-slots="0" data-accept="\d" size="19"
+                            onkeyup="Number(this.value)" required> <label class="text-xs absolute -top-4 left-0">Card
+                            Number</label> </div>
+                    <div class="mt-7 w-full flex gap-3">
+                        <div class=" relative w-full"> <input
+                                class="input_expiry h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900"
+                                placeholder="mm/yyyy" data-slots="my" type="text" onkeyup="Expiry(this.value)" required> <label
+                                class="text-xs absolute -top-4 left-0">Expiry Date</label> </div>
+                        <div class=" relative w-full"> <input
+                                class="input_cvv h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900"
+                                type="text" placeholder="000" data-slots="0" data-accept="\d" size="3"
+                                onkeyup="Cvv(this.value)" required> <label class="text-xs absolute -top-4 left-0">CVV</label>
+                        </div>
+                    </div>
+                    <div class="mt-7 relative"> <input
+                            class="h-12 w-full border border-white transition-all rounded-lg px-2 outline-none focus:border-blue-900"
+                            type="text"> <label class="text-xs absolute -top-4 left-0" onkeyup="Name(this.value)">Name
+                            on Card</label> </div>
+                    <p class="mt-4">Amount due : <a class="font-semibold" href="#"><i class="fa fa-rupee"></i>
+                    <span id="Amount"> </span>.00</a></p>
+                    <div class="mb-5">
+                        <a href="/data"><button
+                            class="pay_now mt-4 outline-none rounded-lg text-white h-12 w-full bg-green-500 text-sm cursor-pointer transition-all hover:bg-green-800"><i
+                                class="fa fa-lock mr-1 "></i>Pay Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file Started here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script language="javascript" type="text/javascript" src="/static/js/payments/payment-receipt.js"></script>
+
+    <SCript>
+        document.addEventListener('DOMContentLoaded', () => {
+            for (const el of document.querySelectorAll("[placeholder][data-slots]")) {
+                const pattern = el.getAttribute("placeholder"),
+                    slots = new Set(el.dataset.slots || "_"),
+                    prev = (j => Array.from(pattern, (c, i) => slots.has(c) ? j = i + 1 : j))(0),
+                    first = [...pattern].findIndex(c => slots.has(c)),
+                    accept = new RegExp(el.dataset.accept || "\\d", "g"),
+                    clean = input => {
+                        input = input.match(accept) || [];
+                        return Array.from(pattern, c =>
+                            input[0] === c || slots.has(c) ? input.shift() || c : c
+                        );
+                    },
+                    format = () => {
+                        const [i, j] = [el.selectionStart, el.selectionEnd].map(i => {
+                            i = clean(el.value.slice(0, i)).findIndex(c => slots.has(c));
+                            return i < 0 ? prev[prev.length - 1] : back ? prev[i - 1] || first : i;
+                        }); el.value = clean(el.value).join``; el.setSelectionRange(i, j); back = false;
+                    }; let back = false; el.addEventListener("keydown", (e) => back = e.key === "Backspace");
+                el.addEventListener("input", format);
+                el.addEventListener("focus", format);
+                el.addEventListener("blur", () => el.value === pattern && (el.value = ""));
+            }
+        });
+
+        var pay_now = document.querySelector(".pay_now");
+        var input = document.querySelectorAll(".card input");
+
+        pay_now.addEventListener('click', function () {
+            input.forEach(function (e) {
+                e.classList.remove('warnng');
+                if (e.value.length == "0") {
+                    e.classList.add('warning');
+                }
+                else {
+                    e.classList.remove('warning');
+                }
+            });
+        });
+
+        var shown_number = document.querySelector(".shown_number");
+        var shown_expiry = document.querySelector(".shown_expiry");
+        var shown_cvv = document.querySelector(".shown_cvv");
+
+
+        function Number(written_value) {
+            shown_number.innerHTML = written_value;
+        }
+
+        function Expiry(written_expiry) {
+            shown_expiry.innerHTML = written_expiry;
+        }
+
+        function Cvv(written_cvv) {
+            shown_cvv.innerHTML = written_cvv;
+        }
+
+        {{!-- Payment Value --}}
+        var product = JSON.parse(localStorage.getItem("product"));
+        {{!-- console.log(product[0]) --}}
+
+        document.getElementById("Amount").innerHTML = product[0];
+
+    </SCript>
+
+</body>
+
+</html>

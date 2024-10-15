@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.solar {
+    padding: 1rem 0rem;
+    background: linear-gradient(to right,
+            rgb(56, 124, 179) 0%,
+            rgb(209, 76, 83) 100%);
+}
+
+.solar h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: blue;
+    text-decoration: underline;
+}
+
+.solar h2 span {
+    color: green;
+    padding: 0rem 0.5rem;
+    text-decoration: underline;
+}
+
+.solar .info {
+    padding: 1rem;
+}
+
+.buy {
+    width: 80vw;
+    margin: 2rem auto;
+
+        {
+            {
+             !-- color: white;
+            --
+        }
+    }
+}
+
+.buy .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.buy .carousel .card:hover {
+    background: crimson;
+}
+
+.buy .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.buy .carousel .card .box .para {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.buy .carousel .card:hover .box {
+    transform: scale(1.05);
+    color: black;
+}
+
+.buy .carousel .card .text {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0.6rem 0 0.4rem 0;
+}
+
+.buy .carousel .card img {
+    height: 9.5rem;
+    width: 9.5rem;
+    object-fit: cover;
+    border-radius: 20%;
+    border: 0.25rem solid crimson;
+    transition: all 0.3s ease;
+}
+
+.buy .carousel .card:hover img {
+    border-color: #fff;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson !important;
+}

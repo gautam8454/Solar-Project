@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* navbar */
+
+.navbar {
+    display: none;
+}
+
+.nav-set {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo .logo img {
+    /* padding: 0.5rem; */
+    margin: 0.5rem 1rem;
+    filter: invert(90%);
+    width: 3rem;
+    border-radius: 20%;
+}
+
+.navbar .button {
+    margin-left: 10px;
+}
+
+.text {
+    height: 3rem;
+    vertical-align: middle;
+    margin: 0.5rem;
+}
+
+.text h1 {
+    color: green;
+    cursor: pointer;
+}
+
+.text a {
+    text-decoration: none;
+
+}
+
+.text span {
+    color: red;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: whitesmoke; */
+    background: rgb(54, 52, 52)
+}
+
+.nav a .btn {
+    font-size: 1rem;
+    /* margin: 0px 20px; */
+}
+
+/* Slider carousel */
+
+#carouselIndicators .carousel-inner .carousel-item img {
+    background-size: cover;
+    height: 84vh;
+    width: 100vw;
+}
+
+#carouselIndicators .carousel-inner .carousel-item .carousel-caption h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+#carouselIndicators .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 1.5rem;
+}
+
+/* info first Section */
+
+.info .first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 9.5rem;
+    margin: 2rem 1rem;
+}
+
+.heading {
+    text-align: center;
+    margin: 1rem 0rem;
+}
+
+.info .first .para {
+    max-width: 50%;
+    margin: 0.6rem 1rem;
+    padding-left: 0.5rem;
+    /* margin-right: 10px; */
+    /* text-align: center; */
+    font-size: 1.05rem;
+}
+
+.info .first .img {
+    max-width: 45%;
+    padding: 0px 0px;
+    /* text-align: center; */
+    margin: 0.6rem auto;
+}
+
+.info .first .img img {
+    padding: 0px 0px;
+    /* height: 95vh; */
+    width: 100vw;
+}
+
+/* info second Section */
+
+.info .second {
+    flex-direction: row-reverse;
+}
+
+/* info third Section */
+
+.info .third .parternship1 {
+    display: flex;
+    justify-content: center
+}
+
+.info .third .parternship2 {
+    display: flex;
+    justify-content: center
+}
+
+.info .third .partner {
+    width: 30%;
+}
+
+/* Team Modal  */
+
+.groups {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.groups .team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 0rem;
+}
+
+.groups .team .img {
+    margin-left: 0.5rem;
+}
+
+.groups .team .img img {
+    width: 15vw;
+    height: 25vh;
+    border-radius: 10%;
+}
+
+.groups .team .name,
+.groups .team .roll {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#contact-section {
+    display: none;
+}
+
+/* Responsive  */
+
+@media screen and (max-width: 1000px) {
+
+    html {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .info .first {
+        flex-direction: column;
+        margin: 1rem 0rem;
+        padding: 0rem 1rem;
+    }
+
+    .info .first .para {
+        max-width: 100%;
+        margin: 0rem;
+    }
+
+    .info .first .img {
+        max-width: 100%;
+        margin: 0rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+   
+    html{
+        font-size: 12px;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav .button {
+        margin: 0.5rem 0rem;
+    }
+
+}
+

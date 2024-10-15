@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Electrical-Section */
+
+#service-electrical-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: center / cover no-repeat url("/static/img/img54.jpg");
+    height: 100vh;
+}
+
+#service-electrical-section h1{
+    font-size: 50px;
+    color: white;
+}
+
+#service-electrical-section p{
+    font-size: 25px;
+    color :white;
+    font-weight: 500;
+}
+
+/* Default first Section */
+
+.info .first{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* max-width: 100%; */
+    /* margin:0px auto; */
+    /* margin-left: 10px; */
+    padding: 0px 0px;
+    overflow: hidden;
+    /* margin: 20px; */
+}
+
+.info .first .para {
+    max-width: 35%;
+    padding: 0rem 0.6rem;
+    /* padding-left: 10px; */
+    /* margin-right: 10px; */
+    /* text-align: center; */
+    font-size: 18px;
+}
+
+.info .first .para h3,
+.info .first .para h4 {
+    color: green;
+}
+
+.info .first .img {
+    max-width: 70%;
+    padding: 0px 0px;
+    /* text-align: center; */
+    /* margin: auto; */
+}
+
+.info .first .img img{
+    padding: 0px 0px;
+    height: 105vh;
+    width: 100vw;
+}
+
+.info .first .parternship1{
+    display: flex;
+    justify-content: center
+}
+
+.info .first .parternship2{
+    display: flex;
+    justify-content: center
+}
+
+.info .first .partner{
+    width: 40%;
+}
+
+/* Second Section */
+
+.info .second{
+    flex-direction: row-reverse;
+    margin-left: 0px;
+    /* margin-right: 10px; */
+}
+
+.info .second .paragraph p {
+    color: green;
+    font-weight: 500;
+}
+
+/* Third Section */
+
+.info .third .paragraph h2 {
+    color: green;
+    font-weight: 500;
+}
+
+/* .info .third .para {
+    max-width: 45%;
+} */
+
+.info .third .img {
+    max-width: 80%;
+}
+
+.info .third .img img {
+    width: 72vw;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1120px) {
+
+    html {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .info .first {
+        flex-direction: column;
+        align-items: center;
+        margin: 0.6rem 0rem;
+        padding: 1rem 2rem;
+    }
+
+    .info .first .para {
+        max-width: 100%;
+    }
+
+    .info .first .img {
+        max-width: 100%;
+    }
+     
+    .info .first .img img {
+        height: auto;
+    }
+
+}

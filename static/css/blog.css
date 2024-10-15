@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-bottom: 3.1rem;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.container .row {
+    padding-bottom: 0.6rem;
+}
+
+.container .row .start {
+    padding: 0.6rem;
+}
+
+.container .row .start .card {
+    vertical-align: middle;
+    border: 1px solid rgba(211, 211, 211, 0.28);
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    height: 100%;
+}
+
+.container .row .start .card .img {
+    display: flex;
+}
+
+.container .row .start .card .img img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.container .row .start .card .card-body {
+    border-top: 1px solid lightgrey;
+}
+
+.container .row .start .card .card-body .row-card {
+    justify-content: space-between;
+}
+
+.container .row .start .card .card-body .row-card .left {
+    margin-bottom: 0px;
+}
+
+.container .row .start .card .card-body .row-card .right {
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#contact-section {
+    display: none;
+}

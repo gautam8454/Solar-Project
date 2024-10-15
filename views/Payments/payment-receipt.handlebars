@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Solar Zone</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        #receipt-session #table {
+            margin: 2rem auto;
+        }
+
+        #contact-section,
+        #footer {
+            display: none;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .btn {
+            width: 8rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="main">Merchant Check out page</h1>
+
+    <section id="receipt-session">
+        <form name="form" action="/payment" , method="get">
+            <table id="table">
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Label</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Order_Id</td>
+                    <td id="OrderId">ORD987678912</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Custid</td>
+                    <td id="CustId">CUST012</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>INDUSTRY TYPE_ID</td>
+                    <td>Retail</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Channel</td>
+                    <td>WEB</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Category</td>
+                    <td id="Category">XYZ</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Product Name</td>
+                    <td id="Product">XYZ</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Amount</td>
+                    <td id="Amount">999</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><a href="/payment-card"><button type="button" id="btn" class="btn btn-success">Checkout</button></a></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+
+    <!-- JavaScript: -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script language="javascript" type="text/javascript" src="/static/js/payments/payment-receipt.js"></script>
+
+</body>
+
+</html>

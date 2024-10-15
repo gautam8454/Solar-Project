@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: none;
+}
+
+body::before{
+    opacity: 0.5;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0px;
+    position: absolute;
+    background: url('../img/signin.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.text {
+    margin: 20px;
+    height: 2.5rem;
+    vertical-align: middle;
+}
+
+.text span {
+    color: red;
+}
+
+.text h1{
+    /* text-align: center; */
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h2{
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header h2 span{
+    color: green;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.header h2 span span{
+    color: orange;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.para p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Message notification Here */
+
+#mess {
+    width: 30rem;
+    display: inline-block;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+
+
+.container {
+    margin: 1.2rem auto;
+    /* border: 2px solid black; */
+    max-width: 40%;
+    padding: 1.5rem;
+}
+ 
+.container h2{
+    margin: 1.2rem 0px;
+    font-size: 2.2rem;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#emailpara{
+    /* font-weight: bold; */
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+input {
+    display: block;
+    padding: 3px;
+    margin: 0.85rem auto;
+    width: 100%;
+    height: 1.8rem;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: none;
+}
+
+.container .btn {
+    margin: 4px 0px;
+    display: block;
+    padding: 0.4rem 0.8rem;
+    background-color: blue;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.container .btn:hover{
+    background : green;
+    /* font-size: 1.2rem; */
+    color: black;
+}
+
+.container #signup .signin{
+    margin: 1rem 0rem;
+}
+
+.container #signup .signin h3{
+    display: inline-block;
+    margin: 0px 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.container #signup .signin a{
+    font-size: 1.5rem;
+}
+
+.container #signup .signin a:hover{
+    color: green;
+    /* font-size: 1.4rem; */
+}
+
+#contact-section{
+    display: none;
+}
+
+#up{
+    display: none;
+}
+
+#footer{
+    display: none;
+}
+
+/* Responsive  */
+
+@media screen and (max-width: 1000px) {
+    
+    /* .text{
+        text-align: center;
+    } */
+
+    .container{
+        max-width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    
+    .container{
+        max-width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 15px;
+    }
+
+    .container{
+        max-width: 100%;
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    html{
+        font-size: 12px;
+    }
+  
+}
+
+@media screen and (max-width: 220px) {
+    html{
+        font-size: 8px;
+    }
+  
+}

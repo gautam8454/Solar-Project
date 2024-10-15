@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    text-align: center;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    background: center / cover no-repeat url("/static/img/img4.jpg");
+    height: 80vh;
+}
+
+#contact .container h1{
+    font-size: 7.5rem;
+}
+
+#contact .container p{
+    font-size: 3.1rem;
+}
+
+.contact-section{
+    max-width: 80%;
+    margin: 0.6rem auto;
+    font-size: 1.2rem;
+    /* text-align: center; */
+}
+
+/* responsive */
+
+@media screen and (max-width: 770px) {
+
+    html {
+        font-size: 14px;
+    }
+ 
+} 
+
+@media screen and (max-width: 550px) {
+
+    html {
+        font-size: 12px;
+    }
+ 
+} 
+
+@media screen and (max-width: 400px) {
+
+    html {
+        font-size: 10px;
+    }
+ 
+} 

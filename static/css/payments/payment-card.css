@@ -1,0 +1,29 @@
+
+#contact-section{
+    display: none;
+}
+
+#footer .foot-footer .foot {
+    padding: 1.2rem;
+    margin: 0 30rem;
+}
+
+@media(max-width:800px) {
+    .card {
+        width: 330px
+    }
+
+    .left_side {
+        display: none
+    }
+
+    .right_side {
+        width: 100%;
+        border-top-left-radius: 9px;
+        border-bottom-left-radius: 9px
+    }
+}
+
+.warning {
+    border: 1px solid red !important
+}

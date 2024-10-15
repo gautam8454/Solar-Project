@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#career h1{
+    font-size: 3.8rem;
+}
+
+#career p{
+    font-size: 2.5rem;
+}
+
+#career{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    background: center / cover no-repeat url("/static/img/img21.jpg");
+    height: 100vh;
+}
+
+.container{
+    max-width: 80%;
+}
+
+/* responsive */
+
+@media screen and (max-width: 600px) {
+
+   html {
+       font-size: 12px;
+   }
+
+} 

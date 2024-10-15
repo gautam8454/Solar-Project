@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#payment-section {
+    background: rgb(230, 227, 223);
+    max-width: 60%;
+    margin: auto;
+}
